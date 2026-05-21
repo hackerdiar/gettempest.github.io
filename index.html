@@ -3,76 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tempest | Next-Gen Executor</title>
+    <title>Tempest | Elite Execution</title>
     <style>
+        /* Modern Indigo/Dark Theme */
         :root {
-            --bg-dark: #1e1e1e;
-            --panel-bg: #252526;
-            --indigo-main: #4b0082;
-            --indigo-accent: #6a0dad;
-            --text-color: #e0e0e0;
-            --white: #ffffff;
+            --bg: #0d0d12;
+            --surface: #16161e;
+            --accent: #4b0082; /* Indigo */
+            --accent-glow: rgba(75, 0, 130, 0.5);
+            --text-main: #f8f8f2;
+            --text-dim: #a9a9b3;
         }
 
         body {
-            background-color: var(--bg-dark);
-            color: var(--text-color);
-            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            font-family: 'Inter', -apple-system, sans-serif;
             margin: 0;
-            text-align: center;
+            line-height: 1.6;
         }
 
-        header { padding: 80px 20px; background: linear-gradient(180deg, #2d2d2d, var(--bg-dark)); }
-        
-        h1 { font-size: 3rem; margin-bottom: 10px; color: var(--white); }
-        h1 span { color: var(--indigo-accent); }
-        
-        .cta-button {
-            background-color: var(--indigo-main);
+        /* Hero Section */
+        .hero {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle at 50% 50%, #1e1e2e, var(--bg));
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            margin: 0;
+            background: linear-gradient(to right, #fff, var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p { font-size: 1.2rem; color: var(--text-dim); max-width: 600px; }
+
+        /* Button */
+        .btn {
+            background: var(--accent);
             color: white;
-            padding: 15px 30px;
-            border-radius: 5px;
+            padding: 15px 40px;
+            border-radius: 50px;
             text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 20px;
+            font-weight: 600;
+            box-shadow: 0 0 20px var(--accent-glow);
+            transition: 0.4s;
+            margin-top: 30px;
+        }
+
+        .btn:hover { transform: translateY(-5px); box-shadow: 0 0 30px var(--accent); }
+
+        /* Features Grid */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 80px 10%;
+        }
+
+        .feature-card {
+            background: var(--surface);
+            padding: 40px;
+            border: 1px solid #2a2a3a;
+            border-radius: 15px;
             transition: 0.3s;
         }
-        
-        .cta-button:hover { background-color: var(--indigo-accent); transform: scale(1.05); }
 
-        .features { display: flex; justify-content: center; gap: 40px; padding: 50px 20px; }
-        .card { background: var(--panel-bg); padding: 20px; border: 1px solid #333; border-radius: 8px; width: 250px; }
-        
-        footer { padding: 40px; font-size: 0.9rem; color: #888; border-top: 1px solid #333; }
+        .feature-card:hover { border-color: var(--accent); }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>TEMPEST <span>EXEC</span></h1>
-        <p>The fastest and most stable executor for your gaming experience.</p>
-        <a href="#download" class="cta-button">Download Now</a>
-    </header>
+    <div class="hero">
+        <h1>TEMPEST</h1>
+        <p>Advanced script execution architecture. Built for performance, stability, and total control.</p>
+        <a href="#" class="btn">Download v1.2.0</a>
+    </div>
 
-    <section class="features">
-        <div class="card">
-            <h3>Ultra Stable</h3>
-            <p>Built with optimization in mind for all hardware types.</p>
+    <div class="features">
+        <div class="feature-card">
+            <h3>Low-Latency Engine</h3>
+            <p>Optimized for minimal CPU overhead. Won't slow down your game even on modest hardware.</p>
         </div>
-        <div class="card">
-            <h3>Custom UI</h3>
-            <p>A sleek, VS-inspired interface that feels familiar.</p>
+        <div class="feature-card">
+            <h3>Visual Studio Aesthetics</h3>
+            <p>Designed with a familiar, professional code-editor look that stays out of your way.</p>
         </div>
-        <div class="card">
-            <h3>Frequent Updates</h3>
-            <p>Always patched and ready for the latest versions.</p>
+        <div class="feature-card">
+            <h3>Deep Integration</h3>
+            <p>Full support for complex C# frameworks and custom user-scripts.</p>
         </div>
-    </section>
-
-    <footer>
-        &copy; 2026 Tempest Development. All rights reserved.
-    </footer>
+    </div>
 
 </body>
 </html>
